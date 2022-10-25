@@ -54,9 +54,9 @@ Please give us Credits if you going to use it
 |:---------:|:----------------------------:| 
 
 ## Some Images:
-![OAuth2 Help Commands](./images/1.PNG)
-![OAuth2 Command](./images/2.PNG)
-![OAuth2 Giveaway Commands](./images/1.PNG)
+![OAuth2 Help Commands](./images/1.png)
+![OAuth2 Command](./images/2.png)
+![OAuth2 Giveaway Commands](./images/1.png)
 
 # Changelogs:
 ``Version 2.0``
