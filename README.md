@@ -5,7 +5,6 @@ Please give us Credits if you going to use it
 
 # Remember:
 + ``We're not responsible for anything that happens. This is a violation of Discord's Terms of Service. This is purely for educational purposes only, whatever happens is on you.``
-- `This is discontinued project. If you're not an experienced developer and receive errors, please do NOT direct message me us help.`
   
 # Instructions: Bot 
 **In order to make this work you'll require a mongo database (I will not tell you how to make one)**
