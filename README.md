@@ -46,7 +46,6 @@ Please give us Credits if you going to use it
 
 ## Creators Discord:
 
-|:---------:|:----------------------------:| 
 | Azagaria  | >Azagaria#9999 |
 |:---------:|:----------------------------:| 
 | Nobi  | Got banned... |
