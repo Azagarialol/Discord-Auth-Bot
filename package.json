@@ -1,0 +1,20 @@
+{
+  "name": "Oauth3-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Nithish Pravin",
+    "Github": "https://github.com/Major-Thrust"
+  },
+  "dependencies": {
+    "chalk": "^5.1.2",
+    "discord-buttons": "^4.0.0-deprecated",
+    "discord.js": "^12.5.3",
+    "events": "^3.3.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.6",
+    "node-fetch": "^2.6.1",
+    "quick.db": "^9.0.6"
+  }
+}
