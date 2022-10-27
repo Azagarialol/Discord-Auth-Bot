@@ -57,9 +57,8 @@ Please give us Credits if you going to use it
 ![OAuth2 Command](./images/2.png)
 
 # Changelogs:
-``Version 2.0``
-+ Added a Fake Website
-+ Fixed Refresh Command
-+ Made it open source.
+``Version 3.0``
++ Added Webhooks!
++ Fixed fake site redirection
 
 
