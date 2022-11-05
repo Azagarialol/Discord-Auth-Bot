@@ -1,8 +1,8 @@
-# Support my work
-+ Please support my work 30% of it goes to the UNICEF.
+## Support my work
+Please support my work 30% of it goes to the UNICEF.
 + Wallet Address: LYktD3KGx9vFdQBPaNiyUZXdJLd3Nqybyj
 
-# Discord Authorization Bot:
+## Discord Authorization Bot:
 Discord Authorization Bot allows people to click on a simple link and you can redirect them to any server if the bot is online. Although make sure you use the refresh command every 6 days so you do not lose them.
 
 # Remember:
