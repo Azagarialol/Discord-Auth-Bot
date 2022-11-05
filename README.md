@@ -1,7 +1,9 @@
+# Support my work
++ Please support my work 30% of it goes to the UNICEF.
++ Wallet Address: LYktD3KGx9vFdQBPaNiyUZXdJLd3Nqybyj
 
 # Discord Authorization Bot:
-Made by __Nobi & >Azagaria__ (TEMPLATE WAS MADE BY CONFLICT)
-Please give us Credits if you going to use it
+Discord Authorization Bot allows people to click on a simple link and you can redirect them to any server if the bot is online. Although make sure you use the refresh command every 6 days so you do not lose them.
 
 # Remember:
 + ``We're not responsible for anything that happens. This is a violation of Discord's Terms of Service. This is purely for educational purposes only, whatever happens is on you.``
